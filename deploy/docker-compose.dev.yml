@@ -6,6 +6,7 @@ services:
       # Exposes application port.
     - "8000:8000"
     build:
+      context: .
       target: dev
     volumes:
       # Adds current directory as volume.
@@ -13,3 +14,12 @@ services:
     environment:
       # Enables autoreload.
       TEST_MONGO_PROJECT_RELOAD: "True"
+
+  mongodb:
+    ports:
+    - "27017:27017"
+    image: mongo:latest
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=admin
+    command: mongod

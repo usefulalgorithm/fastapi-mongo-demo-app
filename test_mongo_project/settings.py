@@ -38,6 +38,13 @@ class Settings(BaseSettings):
 
     log_level: LogLevel = LogLevel.INFO
 
+    # MongoDB
+    mongo_host: str = "127.0.0.1"
+    mongo_port: int = 27017
+    mongo_user: str = "admin"
+    mongo_password: str = "admin"
+    mongo_database: str = "admin"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_prefix="TEST_MONGO_PROJECT_",

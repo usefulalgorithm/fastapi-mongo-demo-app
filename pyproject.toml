@@ -19,6 +19,7 @@ pydantic-settings = "^2"
 yarl = "^1.9.2"
 ujson = "^5.8.0"
 httptools = "^0.6.0"
+beanie = "^1.21.0"
 
 
 [tool.poetry.dev-dependencies]
@@ -52,6 +53,9 @@ allow_untyped_decorators = true
 warn_unused_ignores = false
 warn_return_any = false
 namespace_packages = true
+plugins = [
+    "pydantic.mypy"
+]
 
 [tool.pytest.ini_options]
 filterwarnings = [

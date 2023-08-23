@@ -72,6 +72,14 @@ ignore =
   WPS473,
   ; too many no-cover comments.
   WPS403,
+  ; let's just ignore all docstring errors...
+  D,
+  ; Found line with high Jones Complexity
+  WPS221,
+  ; Found too short name
+  WPS111,
+  ; ... and let's ignore WPS, for they don't really make things better
+  WPS,
 
 per-file-ignores =
   ; all tests
